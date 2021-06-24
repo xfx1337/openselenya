@@ -51,7 +51,7 @@ username, password
 
 Создайте приложение в телеграмме и создайте конфиг как test.cfg.
 
-Запуск из исходников: python selenya.pyt CONFIG ACCOUNTS
+Запуск из исходников: python selenya.py CONFIG ACCOUNTS
 
 Запуск билда для винды - selenya.exe CONFIG ACCOUNTS
 
