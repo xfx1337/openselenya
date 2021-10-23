@@ -31,7 +31,7 @@ if len(sys.argv) < 3: # 2 args
 print("Open Selenya(trashazart)")
 print("Project is deprecated, no future support")
 
-runlink = 'https://csgorun.pro'
+runlink = 'https://csgorun.gg'
 
 opts = Options()
 opts.headless = True
@@ -213,7 +213,7 @@ def activate_promo(browser, promo, idx):
 
         inp = browser.find_elements_by_id("enter-promo-input")[0]
         inp.send_keys(promo)
-        browser.find_elements_by_class_name("btn--blue")[3].click()
+        browser.find_elements_by_class_name("btn--blue")[2].click()
 
         #browser.find_elements_by_class_name("btn--blue")[0].click()
 
@@ -346,6 +346,7 @@ for i in range(len(browsers)):
 
     while True:
         try:
+            browsers[i].find_elements_by_class_name("switcher__content")[0].click()
             browsers[i].find_elements_by_class_name("hide-above-l")[0].click()
             break
         except:
@@ -388,7 +389,7 @@ for i in range(len(browsers)):
     #     time.sleep(0.2)
     wait_for_run(browsers[i])
 
-    time.sleep(0.5)
+    time.sleep(3)
     wait_for_elem(browsers[i], "header-user__about").click()
 
     time.sleep(2)
